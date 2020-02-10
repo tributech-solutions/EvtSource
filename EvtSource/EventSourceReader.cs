@@ -85,6 +85,8 @@ namespace EvtSource
         {
             try
             {
+                Hc.DefaultRequestHeaders.Add("Accept", "text/event-stream");
+
                 if (string.Empty != LastEventId)
                 {
                     if (Hc.DefaultRequestHeaders.Contains("Last-Event-Id"))
